@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fr_240_03_04;
+
+import java.util.function.IntSupplier;
+
+/**
+ *
+ * @author fabien
+ */
+public class FR_240_03_04 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+       parcours(Fibonacci::suivante);
+       parcours(Entiers::get);
+    }
+    
+    public static void parcours(IntSupplier f) {
+         for( int i=0; i<5; i++) {
+            System.out.println("Suivant : "+f.getAsInt());
+        }
+    }
+    
+}
